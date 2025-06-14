@@ -1,7 +1,7 @@
 /* if you are using any Google fonts change the font names below to your fonts. 
 Any spaces in your font name should be replaced with a +. 
 Fonts are separated by a & */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rock+Salt&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rock+Salt&display=swap');
 
 :root {
   /* change the values below to your colors from your palette */
@@ -76,7 +76,7 @@ nav a:hover {
   #hero-msg {
   grid-column: 2/3;
   grid-row: 1/2;
-  margin-top: 100px;}
+  margin-top: 10px;}
 
 #hero-box {
   grid-column: 1/4;
