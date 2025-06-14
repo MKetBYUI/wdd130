@@ -1,3 +1,5 @@
+
+
 /* if you are using any Google fonts change the font names below to your fonts. 
 Any spaces in your font name should be replaced with a +. 
 Fonts are separated by a & */
@@ -35,14 +37,14 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--headline-color-on-white);}
 
 body {
-    background-color: rgb(150, 190, 200);
+    background-color: var(--nav-background-color);
     font-family: var(--paragraph-font);
     font-size: 22px;
     margin: 0;
     padding: 0;}
 
 .logo {
-  width: 100px}
+  width: 90px}
 
 #logo_link {
     padding-top: 5px;
@@ -52,7 +54,7 @@ body {
 nav {
     display: flex;
     justify-content: space-around;
-    background-color:(--nav-background-color);}  
+    background-color: var(--nav-background-color);}  
     
 nav a {
     text-decoration: none;
@@ -93,7 +95,7 @@ h2 {
   margin:0;}
 
 header {
-    opacity: 1.0; /*setting header opacity to 100%*/
+    opacity: 0.9; /*setting header opacity to 100%*/
     display: grid;
     grid-template-columns: 150px auto;
     background-color: var(--secondary-color);
