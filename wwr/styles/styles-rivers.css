@@ -1,0 +1,37 @@
+
+
+/* River Features Section */
+.river-features {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 3rem 2rem;}
+
+.feature {
+  display: flex;
+  gap: 2rem;
+  align-items: center;}
+
+.feature.reverse {
+  flex-direction: row-reverse;}
+
+.feature-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, opacity 0.4s ease;}
+
+.feature-img img:hover {
+  transform: scale(1.05) rotate(-1deg);
+  opacity: 0.9;}
+
+
+.feature-text {
+  flex: 1;}
+
+.feature-text h3 {
+  font-family: var(--heading-font);
+  color: var(--accent1-color);
+  margin-bottom: 0.5rem;}
+
