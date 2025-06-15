@@ -178,6 +178,24 @@ main section {
   grid-row: 2/3;
   margin: 200px 0;}
 
+  
+    .rivers-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 40px;
+      }
+    .rivers-gallery img {
+      width: 100%;
+      border: 8px solid var(--accent3-color);
+      box-shadow: 3px 3px 10px #888;
+      transition: transform 0.3s ease;
+      }
+    .rivers-gallery img:hover {
+      transform: scale(1.05);
+      }
+
+
 .msg {
   background-color: #6f7364;
   padding: 35px;
