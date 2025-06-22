@@ -1,0 +1,177 @@
+/* === Base Reset === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: rgb(200, 20, 20);
+  --secondary-color: rgb(255, 215, 0);
+  --accent1-color: rgba(185, 115, 50);
+  --accent2-color: rgb(20, 20, 170);
+
+  --heading-font: "Roboto";
+  --paragraph-font: "Roboto", sans-serif, Tahoma;
+
+  --headline-color-on-white: rgb(20, 20, 170);
+  --headline-color-on-color: white;
+  --paragraph-color-on-white: rgb(20, 20, 170);
+  --paragraph-color-on-color: white;
+  --paragraph-background-color: rgb(20, 20, 170);
+  --nav-link-color: rgb(20, 20, 170);
+  --nav-background-color: rgb(255, 215, 0);
+  --nav-hover-link-color: white;
+  --nav-hover-background-color: rgb(20, 20, 170);
+}
+
+body {
+  font-family: var(--paragraph-font);
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: var(--paragraph-color-on-white);
+}
+
+/* === Header === */
+header {
+  background-color: var(--primary-color);
+  color: var(--headline-color-on-color);
+  padding: 1rem;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: var(--nav-background-color);
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--nav-link-color);
+  padding: 0.75rem 1.25rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: var(--nav-hover-background-color);
+  color: var(--nav-hover-link-color);
+}
+
+/* === Hero Section === */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: white;
+  text-align: center;
+}
+
+.hero img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border: 4px solid var(--accent1-color);
+}
+
+.hero-text h2 {
+  color: var(--headline-color-on-white);
+  margin-top: 1rem;
+}
+
+/* === Overview Section === */
+.overview {
+  background-color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.overview h3 {
+  color: var(--accent2-color);
+}
+
+/* === Utility Cards Section === */
+.utility-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #e5e5e5;
+}
+
+.card {
+  background-color: white;
+  border: 2px solid var(--accent1-color);
+  padding: 1rem;
+  text-align: center;
+  width: 200px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.card h4 {
+  color: var(--primary-color);
+}
+
+/* === Utility Page Layout === */
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: white;
+}
+
+.banner img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border: 3px solid var(--accent1-color);
+}
+
+.utility-content {
+  padding: 2rem;
+  background-color: white;
+  max-width: 800px;
+  margin: auto;
+}
+
+.utility-content h2 {
+  color: var(--accent2-color);
+  margin-bottom: 1rem;
+}
+
+/* === Footer === */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* === Responsive Adjustments === */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .utility-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner {
+    flex-direction: column;
+  }
+}
