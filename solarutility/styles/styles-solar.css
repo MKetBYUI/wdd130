@@ -6,23 +6,24 @@
 }
 
 :root {
-  --primary-color: rgb(200, 20, 20);
-  --secondary-color: rgb(255, 215, 0);
-  --accent1-color: rgba(185, 115, 50);
-  --accent2-color: rgb(20, 20, 170);
+  /* Arizona State Flag Palette */
+  --primary-color: rgb(200, 20, 20);     /* Red */
+  --secondary-color: rgb(255, 215, 0);   /* Gold */
+  --accent1-color: rgba(185, 115, 50);   /* Tan/Bronze */
+  --accent2-color: rgb(20, 20, 170);     /* Navy Blue */
 
   --heading-font: "Roboto";
   --paragraph-font: "Roboto", sans-serif, Tahoma;
 
-  --headline-color-on-white: rgb(20, 20, 170);
+  --headline-color-on-white: var(--accent2-color);
   --headline-color-on-color: white;
-  --paragraph-color-on-white: rgb(20, 20, 170);
+  --paragraph-color-on-white: var(--accent2-color);
   --paragraph-color-on-color: white;
-  --paragraph-background-color: rgb(20, 20, 170);
-  --nav-link-color: rgb(20, 20, 170);
-  --nav-background-color: rgb(255, 215, 0);
+  --paragraph-background-color: var(--accent2-color);
+  --nav-link-color: var(--accent2-color);
+  --nav-background-color: var(--secondary-color);
   --nav-hover-link-color: white;
-  --nav-hover-background-color: rgb(20, 20, 170);
+  --nav-hover-background-color: var(--accent2-color);
 }
 
 body {
@@ -34,7 +35,7 @@ body {
 
 /* === Header === */
 header {
-  background-color: var(--primary-color);
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
   color: var(--headline-color-on-color);
   padding: 1rem;
   text-align: center;
@@ -61,13 +62,13 @@ nav a:hover {
 
 /* === Hero Section === */
 .hero {
+  background: linear-gradient(to bottom, var(--secondary-color), white);
+  padding: 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
-  padding: 2rem;
-  background-color: white;
   text-align: center;
+  gap: 1rem;
 }
 
 .hero img {
@@ -77,9 +78,13 @@ nav a:hover {
   border: 4px solid var(--accent1-color);
 }
 
+.hero-text {
+  max-width: 600px;
+  margin-top: 1rem;
+}
+
 .hero-text h2 {
   color: var(--headline-color-on-white);
-  margin-top: 1rem;
 }
 
 /* === Overview Section === */
@@ -153,7 +158,7 @@ nav a:hover {
 
 /* === Footer === */
 footer {
-  background-color: var(--primary-color);
+  background: linear-gradient(to right, var(--accent2-color), rgb(10, 10, 60));
   color: white;
   text-align: center;
   padding: 1rem;
