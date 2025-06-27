@@ -126,7 +126,8 @@ nav a:hover {
     text-align: center;
 }
 
-#hero-msg h1, #hero-msg h4 {
+#hero-msg h1, 
+#hero-msg h4 {
     text-align: center;
     color: var(--make-it-pop-color);
     font-family: var(--heading-font);
