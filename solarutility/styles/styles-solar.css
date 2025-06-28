@@ -109,7 +109,6 @@ nav a {
   transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
 
-
 .hero {
   background-color: var(--accent2-color);
   color: var(--secondary-color);
