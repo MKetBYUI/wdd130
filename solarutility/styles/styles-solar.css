@@ -53,8 +53,10 @@ header {
 .footer-logo-img {
   height: 120px;
   width: auto;
+  object-fit: cover;
   border-radius: 6px;
 }
+
 
 .site-title {
   margin: 0;
@@ -87,6 +89,26 @@ nav a {
 nav a:hover {
   background-color: var(--primary-color);
 }
+
+/* Shared hover animation */
+a:hover img,
+nav a:hover,
+.footer-link-button:hover {
+  transform: scale(1.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.1);
+}
+
+/* Make base elements ready for animation */
+.logo,
+.footer-logo-img,
+.social-img,
+.footer-link-button,
+nav a {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
 
 .hero {
   background-color: var(--accent2-color);
@@ -149,7 +171,7 @@ input {
   border-radius: 4px;
 }
 
-button {
+/*button {
   width: 100%;
   padding: 10px;
   background-color: var(--primary-color);
@@ -164,7 +186,27 @@ button {
 
 button:hover {
   background-color: var(--accent2-color);
+}*/
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.6em 1.2em;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
+
+button:hover {
+  background-color: var(--accent2-color);
+  transform: scale(1.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.1);
+}
+
 
 #results {
   margin-top: 1.5em;
@@ -208,6 +250,15 @@ button:hover {
 .results-table th:nth-child(4) {
   text-align: right;
   width: 25%;
+}
+
+.results-table tbody tr {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.results-table tbody tr:hover {
+  transform: scale(1.10);
+  box-shadow: 0 4px 8px rgba(36, 27, 156, 0.15);
 }
 
 footer {
