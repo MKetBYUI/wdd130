@@ -1,16 +1,20 @@
-<!DOCTYPE html>
+
+
+!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arizona Solar Savings Calculator</title>
+  <title>Limp Grid Energy | Arizona Solar Advocacy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary-color: rgb(200, 20, 20);
-      --secondary-color: rgb(255, 215, 0);
+      --secondary-color: rgb(255, 225, 50);
       --accent1-color: rgba(185, 115, 50);
       --accent2-color: rgb(20, 20, 170);
       --font-family: 'Open Sans', sans-serif;
+      --title-font: 'Rock Salt', cursive;
     }
 
     body {
@@ -21,36 +25,85 @@
     }
 
     header {
-      background-color: var(--primary-color);
-      color: white;
-      padding: 1em;
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+      padding: 2em 1em;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
 
-    header h1 {
+    .branding {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+      flex: 1 1 auto;
+    }
+
+    .logo {
+      height: 120px;
+    }
+
+    .site-title {
       margin: 0;
-      font-size: 1.5em;
+      font-size: 1.8em;
+      font-family: var(--title-font);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex: 2 1 auto;
+      gap: 1em;
+      flex-wrap: wrap;
     }
 
     nav a {
+      background-color: var(--accent2-color);
       color: white;
-      margin-left: 1em;
+      padding: 0.6em 1.2em;
+      border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 0.95em;
+      transition: background-color 0.3s ease;
+      flex: 1 1 auto;
+      text-align: center;
+    }
+
+    nav a:hover {
+      background-color: var(--primary-color);
     }
 
     .hero {
       background-color: var(--accent2-color);
-      color: white;
+      color: var(--secondary-color);
       padding: 2em;
       text-align: center;
     }
 
-    .hero h2 {
+    .hero-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1em;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      text-align: center;
+      flex: 1 1 auto;
+    }
+
+    .hero h1 {
+      font-family: var(--title-font);
+      font-size: 2.2em;
       margin: 0;
-      font-size: 2em;
+    }
+
+    .az-flag {
+      height: 120px;
     }
 
     main {
@@ -86,6 +139,11 @@
       font-weight: bold;
       font-size: 1em;
       cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: var(--accent2-color);
     }
 
     #results {
@@ -95,17 +153,27 @@
     }
 
     footer {
+      background-color: var(--accent1-color);
+      color: var(--accent2-color);
+      padding: 2em 1em;
       text-align: center;
-      padding: 1em;
-      background-color: #eee;
-      margin-top: 2em;
+      font-weight: bold;
+    }
+
+    footer p {
+      font-size: 1.6em;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Dry Run Solar</h1>
+    <div class="branding">
+      <a id="logo_link" href="index.html">
+        <img class="logo" src="images/logo.png" alt="Green Home Logo">
+      </a>
+      <h1 class="site-title">Limp Grid Energy</h1>
+    </div>
     <nav>
       <a href="#">Home</a>
       <a href="#">APS</a>
@@ -115,8 +183,14 @@
   </header>
 
   <section class="hero">
-    <h2>Estimate Your Solar Savings</h2>
-    <p>Compare APS, SRP, and TEP export rates based on your solar production.</p>
+    <div class="hero-content">
+      <img src="images/az-st-flag.png" alt="Arizona Flag" class="az-flag">
+      <div class="hero-text">
+        <h1>Arizona Solar Advocacy</h1>
+        <p>Utility Company Comparisons - Consumption vs Production Values - Understand the EcoSystem</p>
+      </div>
+      <img src="images/az-st-flag.png" alt="Arizona Flag" class="az-flag">
+    </div>
   </section>
 
   <main>
@@ -134,7 +208,7 @@
   </main>
 
   <footer>
-    &copy; 2025 Dry Run Solar | Arizona Solar Advocacy
+    <p>&copy; 2025 Utility Solar AZ | Mark Ketring | WDD 130.A1</p>
   </footer>
 
   <script>
