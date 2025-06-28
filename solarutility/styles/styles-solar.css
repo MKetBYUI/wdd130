@@ -182,16 +182,45 @@ button:hover {
   width: 25%;
 }
 
-
-
 footer {
   background-color: var(--accent1-color);
   color: var(--accent2-color);
   padding: 2em 1em;
   text-align: center;
   font-weight: bold;
+  position: relative;
 }
 
 footer p {
   font-size: 1.6em;
+  margin: 0;
 }
+
+.social-icons {
+  position: absolute;
+  right: 1.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 1em;
+}
+
+.social-btn {
+  background-color: var(--accent2-color);
+  color: white;
+  padding: 0.5em;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2em;
+  height: 2.2em;
+  transition: background-color 0.3s ease;
+}
+
+.social-btn:hover {
+  background-color: var(--primary-color);
+}
+
