@@ -2,61 +2,234 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Utility Solar AZ | Home</title>
-  <link rel="stylesheet" href="styles/site.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Limp Grid Energy | Arizona Solar Advocacy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: rgb(200, 20, 20);
+      --secondary-color: rgb(255, 225, 50);
+      --accent1-color: rgba(185, 115, 50);
+      --accent2-color: rgb(20, 20, 170);
+      --font-family: 'Open Sans', sans-serif;
+      --title-font: 'Rock Salt', cursive;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-family);
+      background-color: #fff8f0;
+      color: #222;
+    }
+
+    header {
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+      padding: 2em 1em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .branding {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+      flex: 1 1 auto;
+    }
+
+    .logo {
+      height: 120px;
+    }
+
+    .site-title {
+      margin: 0;
+      font-size: 1.8em;
+      font-family: var(--title-font);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex: 2 1 auto;
+      gap: 1em;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      background-color: var(--accent2-color);
+      color: white;
+      padding: 0.6em 1.2em;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.95em;
+      transition: background-color 0.3s ease;
+      flex: 1 1 auto;
+      text-align: center;
+    }
+
+    nav a:hover {
+      background-color: var(--primary-color);
+    }
+
+    .hero {
+      background-color: var(--accent2-color);
+      color: var(--secondary-color);
+      padding: 2em;
+      text-align: center;
+    }
+
+    .hero-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1em;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      text-align: center;
+      flex: 1 1 auto;
+    }
+
+    .hero h1 {
+      font-family: var(--title-font);
+      font-size: 2.2em;
+      margin: 0;
+    }
+
+    .az-flag {
+      height: 120px;
+    }
+
+    main {
+      max-width: 600px;
+      margin: 2em auto;
+      padding: 2em;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border: 2px solid rgba(185, 115, 50, 0.4);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 1em;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 0.5em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: var(--accent2-color);
+    }
+
+    #results {
+      margin-top: 1.5em;
+      font-size: 1.1em;
+      color: var(--accent2-color);
+    }
+
+    footer {
+      background-color: var(--accent1-color);
+      color: var(--accent2-color);
+      padding: 2em 1em;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    footer p {
+      font-size: 1.6em;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <h1>Utility Solar AZ</h1>
+    <div class="branding">
+      <a id="logo_link" href="index.html">
+        <img class="logo" src="images/logo.png" alt="Green Home Logo">
+      </a>
+      <h1 class="site-title">Limp Grid Energy</h1>
+    </div>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="aps.html">APS</a>
-      <a href="srp.html">SRP</a>
-      <a href="tep.html">TEP</a>
-      <a href="site-map.html">Site Map</a>
+      <a href="#">Home</a>
+      <a href="#">APS</a>
+      <a href="#">SRP</a>
+      <a href="#">TEP</a>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <img src="images/az-st-flag.png" alt="Arizona state flag" />
-      <img src="images/towers-transmission-line.png" alt="Transmission towers" />
+  <section class="hero">
+    <div class="hero-content">
+      <img src="images/az-st-flag.png" alt="Arizona Flag" class="az-flag">
       <div class="hero-text">
-        <h2>Arizona Solar Energy Policy</h2>
-        <p>Requirements, Restrictions, and Tariffs by Utility Provider</p>
+        <h1>Arizona Solar Advocacy</h1>
+        <p>Compare utility plans, estimate savings, and make informed energy decisions.</p>
       </div>
-    </section>
+      <img src="images/az-st-flag.png" alt="Arizona Flag" class="az-flag">
+    </div>
+  </section>
 
-    <section class="overview">
-      <h3>What You Need to Know</h3>
-      <p>This site provides Arizona homeowners with reliable, consumer-focused information about interconnecting residential solar to major utilities: APS, SRP, and TEP.</p>
-    </section>
-
-    <section class="utility-cards">
-      <div class="card">
-        <a href="aps.html">
-          <img src="images/aps-solar.png" alt="APS solar panel array">
-          <h4>APS</h4>
-        </a>
-      </div>
-      <div class="card">
-        <a href="srp.html">
-          <img src="images/srp-solar.png" alt="SRP hydro dam">
-          <h4>SRP</h4>
-        </a>
-      </div>
-      <div class="card">
-        <a href="tep.html">
-          <img src="images/tep-logo.jpg" alt="TEP facility">
-          <h4>TEP</h4>
-        </a>
-      </div>
-    </section>
+  <main>
+    <label>Annual Solar Production (kWh):
+      <input id="solar" type="number" value="10000">
+    </label>
+    <label>Annual Energy Usage (kWh):
+      <input id="usage" type="number" value="12000">
+    </label>
+    <label>Self-Consumption Rate (%):
+      <input id="self" type="number" value="60">
+    </label>
+    <button onclick="calculateSavings()">Calculate</button>
+    <div id="results"></div>
   </main>
 
   <footer>
     <p>&copy; 2025 Utility Solar AZ | Mark Ketring | WDD 130.A1</p>
   </footer>
+
+  <script>
+    function calculateSavings() {
+      const solar = parseFloat(document.getElementById('solar').value);
+      const selfRate = parseFloat(document.getElementById('self').value) / 100;
+      const offsetKWh = solar * selfRate;
+      const exportKWh = solar * (1 - selfRate);
+      const offsetValue = offsetKWh * 0.13;
+
+      const aps = offsetValue + exportKWh * 0.07619;
+      const tep = offsetValue + exportKWh * 0.078;
+      const srp = offsetValue + exportKWh * 0.0281;
+
+      document.getElementById('results').innerHTML = `
+        <p><strong>Estimated Annual Savings:</strong></p>
+        <ul>
+          <li><strong>APS:</strong> $${aps.toFixed(2)}</li>
+          <li><strong>TEP:</strong> $${tep.toFixed(2)}</li>
+          <li><strong>SRP:</strong> $${srp.toFixed(2)}</li>
+        </ul>`;
+    }
+  </script>
+
 </body>
 </html>
