@@ -7,8 +7,14 @@
   --title-font: 'Rock Salt', cursive;
 }
 
-body {
+html, body {
+  height: 100%;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
   font-family: var(--font-family);
   background-color: #fff8f0;
   color: #222;
@@ -99,6 +105,7 @@ nav a:hover {
 }
 
 main {
+  flex: 1 0 auto;
   max-width: 600px;
   margin: 2em 0 2em 2em;
   padding: 2em;
@@ -183,6 +190,7 @@ button:hover {
 }
 
 footer {
+  flex-shrink: 0;
   background-color: var(--accent1-color);
   color: var(--accent2-color);
   padding: 2em 1em;
