@@ -6,20 +6,17 @@
   --accent1-color: rgb(185, 115, 50);
   --accent2-color: rgb(20, 20, 170);
   --font-family: 'Open Sans', sans-serif;
-  --title-font: 'Rock Salt', cursive;
-}
+  --title-font: 'Rock Salt', cursive;}
 
 html, body {
-  height: 100%;
   margin: 0;
-  height: auto;
-}
+  padding: 0;
+  height: 100%;}
 
 body {
   font-family: var(--font-family);
   background-color: #fff8f0;
-  color: #222;
-}
+  color: #222;}
 
 header {
   background-color: var(--secondary-color);
@@ -29,47 +26,40 @@ header {
   align-items: center;
   justify-content: space-between;
   flex-wrap: nowrap;
-  gap: 1em;
-}
+  gap: 1em;}
 
 .branding {
   display: flex;
   align-items: center;
   gap: 1em;
-  flex-shrink: 0;
-}
+  flex-shrink: 0;}
 
 .logo {
-  height: 120px;
-}
+  height: 120px;}
 
 .footer-logo {
   position: absolute;
   left: 1.5em;
   top: 50%;
-  transform: translateY(-50%);
-}
+  transform: translateY(-50%);}
 
 .footer-logo-img {
   height: 120px;
   width: auto;
   object-fit: cover;
-  border-radius: 6px;
-}
+  border-radius: 6px;}
 
 .site-title {
   margin: 0;
   font-size: 1.8em;
-  font-family: var(--title-font);
-}
+  font-family: var(--title-font);}
 
 nav {
   display: flex;
   justify-content: flex-end;
   flex-grow: 1;
   gap: 1em;
-  flex-wrap: nowrap;
-}
+  flex-wrap: nowrap;}
 
 nav a {
   background-color: var(--accent2-color);
@@ -82,12 +72,10 @@ nav a {
   transition: background-color 0.3s ease;
   min-width: 120px;
   text-align: center;
-  flex-shrink: 0;
-}
+  flex-shrink: 0;}
 
 nav a:hover {
-  background-color: var(--primary-color);
-}
+  background-color: var(--primary-color);}
 
 a:hover img,
 nav a:hover,
@@ -95,53 +83,45 @@ nav a:hover,
   transform: scale(1.25);
   transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  filter: brightness(1.1);
-}
+  filter: brightness(1.1);}
 
 .logo,
 .footer-logo-img,
 .social-img,
 .footer-link-button,
 nav a {
-  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-}
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;}
 
 .hero {
   background-color: var(--accent2-color);
   color: var(--secondary-color);
   padding: 2em;
-  text-align: center;
-}
+  text-align: center;}
 
 .hero-img {
   height: 120px;
   width: auto;
   object-fit: cover;
-  border-radius: 6px;
-}
+  border-radius: 6px;}
 
 .hero-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1em;
-  flex-wrap: wrap;
-}
+  flex-wrap: wrap;}
 
 .hero-text {
   text-align: center;
-  flex: 1 1 auto;
-}
+  flex: 1 1 auto;}
 
 .hero h1 {
   font-family: var(--title-font);
   font-size: 2.2em;
-  margin: 0;
-}
+  margin: 0;}
 
 .az-flag {
-  height: 120px;
-}
+  height: 120px;}
 
 /* NEW FLEX LAYOUT FOR MAIN CONTENT */
 .main-flex {
@@ -154,13 +134,11 @@ nav a {
   padding: 2em;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 10px 12px rgba(0,0,0,0.1);
-}
+  box-shadow: 0 10px 12px rgba(0,0,0,0.1);}
 
 .calculator {
   flex: 1 1 45%;
-  min-width: 300px;
-}
+  min-width: 300px;}
 
 .roi-comparison {
   flex: 1 1 45%;
@@ -168,49 +146,41 @@ nav a {
   background-color: #f9f9f9;
   border: 2px solid #ccc;
   border-radius: 8px;
-  padding: 1rem;
-}
+  padding: 1rem;}
 
 .roi-comparison h2 {
   text-align: center;
   font-family: 'Rock Salt', cursive;
-  margin-bottom: 1rem;
-}
+  margin-bottom: 1rem;}
 
 .roi-table {
   width: 100%;
   border-collapse: collapse;
-  font-family: Arial, sans-serif;
-}
+  font-family: Arial, sans-serif;}
 
 .roi-table th,
 .roi-table td {
   border: 1px solid #ddd;
   padding: 0.75rem;
-  text-align: left;
-}
+  text-align: left;}
 
 .roi-table th {
   background-color: #333;
-  color: #fff;
-}
+  color: #fff;}
 
 .roi-table tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
+  background-color: #f2f2f2;}
 
 label {
   display: block;
-  margin-bottom: 1em;
-}
+  margin-bottom: 1em;}
 
 input {
   width: 100%;
   padding: 8px;
   margin-top: 0.5em;
   border: 1px solid #ccc;
-  border-radius: 4px;
-}
+  border-radius: 4px;}
 
 button {
   background-color: var(--primary-color);
@@ -221,68 +191,57 @@ button {
   font-size: 1em;
   font-weight: bold;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-}
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;}
 
 button:hover {
   background-color: var(--accent2-color);
   transform: scale(1.25);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  filter: brightness(1.1);
-}
+  filter: brightness(1.1);}
 
 #results {
   margin-top: 1.5em;
   font-size: 1.1em;
-  color: var(--accent2-color);
-}
+  color: var(--accent2-color);}
 
 .results-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 1em;
   font-size: 1em;
-  table-layout: fixed;
-}
+  table-layout: fixed;}
 
 .results-table th,
 .results-table td {
   padding: 0.75em 1.5em;
-  border-bottom: 1px solid #ccc;
-}
+  border-bottom: 1px solid #ccc;}
 
 .results-table th {
   background-color: var(--accent2-color);
   color: var(--secondary-color);
-  text-align: left;
-}
+  text-align: left;}
 
 .results-table td:first-child {
-  text-align: left;
-}
+  text-align: left;}
 
 .results-table td:nth-child(2),
 .results-table th:nth-child(2) {
   text-align: right;
-  width: 25%;
-}
+  width: 25%;}
 
 .results-table td:nth-child(3),
 .results-table th:nth-child(3),
 .results-table td:nth-child(4),
 .results-table th:nth-child(4) {
   text-align: right;
-  width: 25%;
-}
+  width: 25%;}
 
 .results-table tbody tr {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+  transition: transform 0.3s ease, box-shadow 0.3s ease;}
 
 .results-table tbody tr:hover {
   transform: scale(1.10);
-  box-shadow: 0 4px 8px rgba(36, 27, 156, 0.15);
-}
+  box-shadow: 0 4px 8px rgba(36, 27, 156, 0.15);}
 
 footer {
   flex-shrink: 0;
@@ -291,17 +250,14 @@ footer {
   padding: 2em 1em;
   text-align: center;
   font-weight: bold;
-  position: relative;
-}
+  position: relative;}
 
 footer p {
   font-size: 1.6em;
-  margin: 0;
-}
+  margin: 0;}
 
 .footer-button {
-  margin-top: 1.5em;
-}
+  margin-top: 1.5em;}
 
 .footer-link-button {
   display: inline-block;
@@ -312,12 +268,10 @@ footer p {
   text-decoration: none;
   font-weight: bold;
   font-size: 1em;
-  transition: background-color 0.3s ease;
-}
+  transition: background-color 0.3s ease;}
 
 .footer-link-button:hover {
-  background-color: var(--primary-color);
-}
+  background-color: var(--primary-color);}
 
 .social-icons {
   position: absolute;
@@ -325,22 +279,28 @@ footer p {
   top: 50%;
   transform: translateY(-50%);
   display: flex;
-  gap: 1em;
-}
+  gap: 1em;}
 
 .social-icons a {
   display: inline-block;
-  transition: transform 0.3s ease;
-}
+  transition: transform 0.3s ease;}
 
 .social-icons a:hover {
-  transform: scale(1.25);
-}
+  transform: scale(1.25);}
 
 .social-img {
   width: 50px;
   height: 50px;
-  border-radius: 6px;
+  border-radius: 6px;}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }
 
 @media (max-width: 600px) {
@@ -363,12 +323,3 @@ footer p {
   nav {
     flex-wrap: wrap}
 
-.page-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-main {
-  flex: 1;
-}
