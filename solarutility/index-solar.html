@@ -1,169 +1,11 @@
-
-
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Limp Grid Energy | Arizona Solar Advocacy</title>
   <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary-color: rgb(200, 20, 20);
-      --secondary-color: rgb(255, 225, 50);
-      --accent1-color: rgba(185, 115, 50);
-      --accent2-color: rgb(20, 20, 170);
-      --font-family: 'Open Sans', sans-serif;
-      --title-font: 'Rock Salt', cursive;
-    }
-
-    body {
-      margin: 0;
-      font-family: var(--font-family);
-      background-color: #fff8f0;
-      color: #222;
-    }
-
-    header {
-      background-color: var(--secondary-color);
-      color: var(--primary-color);
-      padding: 2em 1em;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-
-    .branding {
-      display: flex;
-      align-items: center;
-      gap: 1em;
-      flex: 1 1 auto;
-    }
-
-    .logo {
-      height: 120px;
-    }
-
-    .site-title {
-      margin: 0;
-      font-size: 1.8em;
-      font-family: var(--title-font);
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      flex: 2 1 auto;
-      gap: 1em;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      background-color: var(--accent2-color);
-      color: white;
-      padding: 0.6em 1.2em;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 0.95em;
-      transition: background-color 0.3s ease;
-      flex: 1 1 auto;
-      text-align: center;
-    }
-
-    nav a:hover {
-      background-color: var(--primary-color);
-    }
-
-    .hero {
-      background-color: var(--accent2-color);
-      color: var(--secondary-color);
-      padding: 2em;
-      text-align: center;
-    }
-
-    .hero-content {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1em;
-      flex-wrap: wrap;
-    }
-
-    .hero-text {
-      text-align: center;
-      flex: 1 1 auto;
-    }
-
-    .hero h1 {
-      font-family: var(--title-font);
-      font-size: 2.2em;
-      margin: 0;
-    }
-
-    .az-flag {
-      height: 120px;
-    }
-
-    main {
-      max-width: 600px;
-      margin: 2em auto;
-      padding: 2em;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      border: 2px solid rgba(185, 115, 50, 0.4);
-    }
-
-    label {
-      display: block;
-      margin-bottom: 1em;
-    }
-
-    input {
-      width: 100%;
-      padding: 8px;
-      margin-top: 0.5em;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    button {
-      width: 100%;
-      padding: 10px;
-      background-color: var(--primary-color);
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      font-size: 1em;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: var(--accent2-color);
-    }
-
-    #results {
-      margin-top: 1.5em;
-      font-size: 1.1em;
-      color: var(--accent2-color);
-    }
-
-    footer {
-      background-color: var(--accent1-color);
-      color: var(--accent2-color);
-      padding: 2em 1em;
-      text-align: center;
-      font-weight: bold;
-    }
-
-    footer p {
-      font-size: 1.6em;
-    }
-  </style>
+  <link rel="stylesheet" href="styles/styles-solar.css">
 </head>
 <body>
 
@@ -179,6 +21,7 @@
       <a href="#">APS</a>
       <a href="#">SRP</a>
       <a href="#">TEP</a>
+      <a href="#">Site Plan</a>
     </nav>
   </header>
 
@@ -223,16 +66,41 @@
       const tep = offsetValue + exportKWh * 0.078;
       const srp = offsetValue + exportKWh * 0.0281;
 
-      document.getElementById('results').innerHTML = `
-        <p><strong>Estimated Annual Savings:</strong></p>
-        <ul>
-          <li><strong>APS:</strong> $${aps.toFixed(2)}</li>
-          <li><strong>TEP:</strong> $${tep.toFixed(2)}</li>
-          <li><strong>SRP:</strong> $${srp.toFixed(2)}</li>
-        </ul>`;
+document.getElementById('results').innerHTML = `
+  <p><strong>Estimated Annual Savings:</strong></p>
+  <table class="results-table">
+    <thead>
+      <tr>
+        <th>Utility</th>
+        <th>Offset</th>
+        <th>Export Rate</th>
+        <th>Avg kWh Rate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>APS</td>
+        <td>$${aps.toFixed(2)}</td>
+        <td>$0.07619/kWh</td>
+        <td>$0.13/kWh</td>
+      </tr>
+      <tr>
+        <td>TEP</td>
+        <td>$${tep.toFixed(2)}</td>
+        <td>$0.07800/kWh</td>
+        <td>$0.13/kWh</td>
+      </tr>
+      <tr>
+        <td>SRP</td>
+        <td>$${srp.toFixed(2)}</td>
+        <td>$0.02810/kWh</td>
+        <td>$0.13/kWh</td>
+      </tr>
+    </tbody>
+  </table>`;
+
     }
   </script>
 
 </body>
 </html>
-
