@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Arizona Solar | Limp Grid Energy </title>
+  <title>Arizona Solar | Limp Grid Energy</title>
   <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/styles-solar.css">
 </head>
@@ -22,7 +21,6 @@
       <a href="aps.html">APS</a>
       <a href="srp.html">SRP</a>
       <a href="tep.html">TEP</a>
-      <!-- <a href="#">Site Plan</a> -->
     </nav>
   </header>
 
@@ -31,27 +29,63 @@
       <img src="images/az-st-flag.png" alt="Arizona Flag" class="az-flag">
       <div class="hero-text">
         <h1>Arizona Solar Advocacy</h1>
-        <p>Understand the EcoSystem - Compare Variables - Calculate Real Value</p>
+        <p>Understand the EcoSystem – Compare Variables – Calculate Real Value</p>
       </div>
       <img src="images/az-st-flag.png" alt="Arizona Flag" class="az-flag">
     </div>
   </section>
 
-  <main>
-    <label>Annual Solar Production (kWh):
-      <input id="solar" type="number" value="10000">
-    </label>
-    <label>Annual Energy Usage (kWh):
-      <input id="usage" type="number" value="12000">
-    </label>
-    <label>Self-Consumption Rate (%):
-      <input id="self" type="number" value="60">
-    </label>
-    <label>Retail Rate (¢ /kWh):
-      <input id="rate" type="number" value="13" min="3" max="40" step="1">
-    </label>
-    <button onclick="calculateSavings()">Calculate</button>
-    <div id="results"></div>
+  <main class="main-flex">
+    <div class="calculator">
+      <label>Annual Solar Production (kWh):
+        <input id="solar" type="number" value="10000">
+      </label>
+      <label>Annual Energy Usage (kWh):
+        <input id="usage" type="number" value="12000">
+      </label>
+      <label>Self-Consumption Rate (%):
+        <input id="self" type="number" value="60">
+      </label>
+      <label>Retail Rate (¢ /kWh):
+        <input id="rate" type="number" value="13" min="3" max="40" step="1">
+      </label>
+      <button onclick="calculateSavings()">Calculate</button>
+      <div id="results"></div>
+    </div>
+
+    <section class="roi-comparison">
+      <h2>Solar ROI Comparison by Utility (2025)</h2>
+      <table class="roi-table">
+        <thead>
+          <tr>
+            <th>Utility</th>
+            <th>Buyback Rate</th>
+            <th>Payback Period</th>
+            <th>ROI Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>SRP</strong></td>
+            <td>$0.027–$0.037/kWh</td>
+            <td>12–18 years</td>
+            <td>Low export rate + high demand charges = weakest ROI. Battery storage helps but adds cost.</td>
+          </tr>
+          <tr>
+            <td><strong>APS</strong></td>
+            <td>$0.0761/kWh (RCP)</td>
+            <td>8–12 years</td>
+            <td>Moderate ROI. TOU plans reward smart usage timing. No demand charge on one plan.</td>
+          </tr>
+          <tr>
+            <td><strong>TEP</strong></td>
+            <td>$0.0781/kWh (10-year fixed)</td>
+            <td>7–11 years</td>
+            <td>Most stable ROI. Fixed export rate and no demand charge make it solar-friendly.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
   </main>
 
   <footer>
@@ -67,12 +101,11 @@
       <a href="#"><img src="images/facebook.png" alt="Facebook" class="social-img"></a>
       <a href="#"><img src="images/twitter.png" alt="Twitter" class="social-img"></a>
       <a href="#"><img src="images/instagram.png" alt="Instagram" class="social-img"></a>
-      <!-- <a href="#"><img src="images/linkedin.png" alt="LinkedIn" class="social-img"></a> -->
-  
       <a href="https://jigsaw.w3.org/css-validator/check/referer">
         <img style="border:0;width:88px;height:31px"
-            src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
-            alt="Valid CSS!">
+             src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+             alt="Valid CSS!">
+      </a>
     </div>
   
     <div class="footer-button">
@@ -80,57 +113,54 @@
     </div>
   </footer>
 
-
   <script>
-function calculateSavings() {
-  const solar = parseFloat(document.getElementById('solar').value);
-  const usage = parseFloat(document.getElementById('usage').value);
-  const selfRate = parseFloat(document.getElementById('self').value) / 100;
-  const retailRate = parseFloat(document.getElementById('rate').value) / 100;
+    function calculateSavings() {
+      const solar = parseFloat(document.getElementById('solar').value);
+      const usage = parseFloat(document.getElementById('usage').value);
+      const selfRate = parseFloat(document.getElementById('self').value) / 100;
+      const retailRate = parseFloat(document.getElementById('rate').value) / 100;
 
-  const offsetKWh = solar * selfRate;
-  const exportKWh = solar * (1 - selfRate);
-  const offsetValue = offsetKWh * retailRate;
+      const offsetKWh = solar * selfRate;
+      const exportKWh = solar * (1 - selfRate);
+      const offsetValue = offsetKWh * retailRate;
 
-  const aps = offsetValue + exportKWh * 0.07619;
-  const tep = offsetValue + exportKWh * 0.078;
-  const srp = offsetValue + exportKWh * 0.0281;
+      const aps = offsetValue + exportKWh * 0.07619;
+      const tep = offsetValue + exportKWh * 0.078;
+      const srp = offsetValue + exportKWh * 0.0281;
 
-  document.getElementById('results').innerHTML = `
-    <p><strong>Estimated Annual Savings:</strong></p>
-    <table class="results-table">
-      <thead>
-        <tr>
-          <th>Provider</th>
-          <th>Offset</th>
-          <th>Export Rate</th>
-          <th>Retail Rate</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>APS</td>
-          <td>$${aps.toFixed(2)}</td>
-          <td>$0.07619/kWh</td>
-          <td>$${retailRate.toFixed(2)}/kWh</td>
-        </tr>
-        <tr>
-          <td>TEP</td>
-          <td>$${tep.toFixed(2)}</td>
-          <td>$0.07800/kWh</td>
-          <td>$${retailRate.toFixed(2)}/kWh</td>
-        </tr>
-        <tr>
-          <td>SRP</td>
-          <td>$${srp.toFixed(2)}</td>
-          <td>$0.02810/kWh</td>
-          <td>$${retailRate.toFixed(2)}/kWh</td>
-        </tr>
-      </tbody>
-    </table>`;
-}
-
+      document.getElementById('results').innerHTML = `
+        <p><strong>Estimated Annual Savings:</strong></p>
+        <table class="results-table">
+          <thead>
+            <tr>
+              <th>Provider</th>
+              <th>Offset</th>
+              <th>Export Rate</th>
+              <th>Retail Rate</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>APS</td>
+              <td>$${aps.toFixed(2)}</td>
+              <td>$0.07619/kWh</td>
+              <td>$${retailRate.toFixed(2)}/kWh</td>
+            </tr>
+            <tr>
+              <td>TEP</td>
+              <td>$${tep.toFixed(2)}</td>
+              <td>$0.07800/kWh</td>
+              <td>$${retailRate.toFixed(2)}/kWh</td>
+            </tr>
+            <tr>
+              <td>SRP</td>
+              <td>$${srp.toFixed(2)}</td>
+              <td>$0.02810/kWh</td>
+              <td>$${retailRate.toFixed(2)}/kWh</td>
+            </tr>
+          </tbody>
+        </table>`;
+    }
   </script>
-
 </body>
 </html>
