@@ -19,9 +19,11 @@ body {
   color: #222;}
 
 header {
+  max-height: 140px;
+  overflow: hidden;
   background-color: var(--secondary-color);
   color: var(--primary-color);
-  padding: 2em 1em;
+  padding: 1em 1em;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -35,7 +37,7 @@ header {
   flex-shrink: 0;}
 
 .logo {
-  height: 120px;}
+  height: 90px;}
 
 .footer-logo {
   position: absolute;
@@ -95,7 +97,7 @@ nav a {
 .hero {
   background-color: var(--accent2-color);
   color: var(--secondary-color);
-  padding: 2em;
+  padding: 1em 2em;
   text-align: center;}
 
 .hero-img {
@@ -296,9 +298,7 @@ footer p {
 .page-wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-}
+  min-height: 100vh;}
 
 main {
-  flex: 1;
-}
+  flex: 1;}
