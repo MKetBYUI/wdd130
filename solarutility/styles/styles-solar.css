@@ -1,7 +1,9 @@
+
+
 :root {
   --primary-color: rgb(200, 20, 20);
   --secondary-color: rgb(255, 225, 50);
-  --accent1-color: rgba(185, 115, 50);
+  --accent1-color: rgb(185, 115, 50);
   --accent2-color: rgb(20, 20, 170);
   --font-family: 'Open Sans', sans-serif;
   --title-font: 'Rock Salt', cursive;
