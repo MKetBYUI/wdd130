@@ -154,8 +154,8 @@ main {
   padding: 2em;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  border: 2px solid rgba(185, 115, 50, 0.4);
+  box-shadow: 0 10px 12px rgba(0,0,0,0.1);
+  border: 10px var(--accent1-color);
 }
 
 label {
@@ -170,23 +170,6 @@ input {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-
-/*button {
-  width: 100%;
-  padding: 10px;
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: var(--accent2-color);
-}*/
 
 button {
   background-color: var(--primary-color);
