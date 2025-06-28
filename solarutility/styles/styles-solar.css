@@ -205,22 +205,19 @@ footer p {
   gap: 1em;
 }
 
-.social-btn {
-  background-color: var(--accent2-color);
-  color: white;
-  padding: 0.5em;
-  border-radius: 50%;
-  text-decoration: none;
-  font-size: 1em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.2em;
-  height: 2.2em;
-  transition: background-color 0.3s ease;
+.social-icons a {
+  display: inline-block;
+  transition: transform 0.3s ease;
 }
 
-.social-btn:hover {
-  background-color: var(--primary-color);
+.social-icons a:hover {
+  transform: scale(1.25);
 }
+
+.social-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+}
+
 
