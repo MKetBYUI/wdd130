@@ -1,6 +1,7 @@
+
 :root {
   --primary-color: rgb(200, 20, 20);
-  --secondary-color: rgb(255, 225, 50);
+  --secondary-color: rgb(255, 225, 0);
   --accent1-color: rgb(185, 115, 50);
   --accent2-color: rgb(20, 20, 170);
   --font-family: 'Open Sans', sans-serif;
@@ -42,6 +43,19 @@ header {
   height: 120px;
 }
 
+.footer-logo {
+  position: absolute;
+  left: 1.5em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.footer-logo-img {
+  height: 120px;
+  width: auto;
+  border-radius: 6px;
+}
+
 .site-title {
   margin: 0;
   font-size: 1.8em;
@@ -79,6 +93,13 @@ nav a:hover {
   color: var(--secondary-color);
   padding: 2em;
   text-align: center;
+}
+
+.hero-img {
+  height: 120px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 6px;
 }
 
 .hero-content {
@@ -204,6 +225,27 @@ footer p {
   margin: 0;
 }
 
+.footer-button {
+  margin-top: 1.5em;
+}
+
+.footer-link-button {
+  display: inline-block;
+  background-color: var(--accent2-color);
+  color: white;
+  padding: 0.6em 1.2em;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.footer-link-button:hover {
+  background-color: var(--primary-color);
+}
+
+
 .social-icons {
   position: absolute;
   right: 1.5em;
@@ -226,4 +268,49 @@ footer p {
   width: 50px;
   height: 50px;
   border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo,
+  .az-flag {
+    height: 80px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    min-width: unset;
+    width: 100%;
+    margin-bottom: 0.5em;
+  }
+
+  main {
+    margin: 1em;
+    padding: 1.5em;
+  }
+
+  .social-icons {
+    position: static;
+    transform: none;
+    justify-content: center;
+    margin-top: 1em;
+  }
+
+  footer p {
+    font-size: 1.2em;
+  }
 }
