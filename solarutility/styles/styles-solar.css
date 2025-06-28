@@ -303,7 +303,7 @@ main {
   flex: 1;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600px)
   header {
     flex-direction: column;
     align-items: center;
