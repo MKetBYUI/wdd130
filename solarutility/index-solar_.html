@@ -1,29 +1,28 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Limp Grid Energy | Arizona Solar Advocacy</title>
+  <title>Arizona Solar | Limp Grid Energy</title>
   <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/styles-solar.css">
 </head>
 <body>
+  <div class="page-wrapper">
 
   <header>
     <div class="branding">
       <a id="logo_link" href="index-solar.html">
-        <img class="logo" src="images/logo.png" alt="Green Home Logo">
+        <img class="logo" src="images/logo.png" alt="Limp Grid Logo">
       </a>
       <h1 class="site-title">Limp Grid Energy</h1>
     </div>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">APS</a>
-      <a href="#">SRP</a>
-      <a href="#">TEP</a>
-      <a href="#">Site Plan</a>
+      <a href="index-solar.html">Home</a>
+      <a href="aps.html">APS</a>
+      <a href="srp.html">SRP</a>
+      <a href="tep.html">TEP</a>
     </nav>
   </header>
 
@@ -32,100 +31,174 @@
       <img src="images/az-st-flag.png" alt="Arizona Flag" class="az-flag">
       <div class="hero-text">
         <h1>Arizona Solar Advocacy</h1>
-        <p>Understand our EcoSystem - Compare Variables - Value Of Production?</p>
+        <p>Understand the EcoSystem - Compare Variables - Calculate Real Value</p>
+        <p>"We did not inherit the earth from our ancestors, we are only borrowing it from our children."</p>
       </div>
-      <img src="images/az-st-flag.png" alt="Arizona Flag" class="az-flag">
+      <img src="images/hq-azcc.jpg" alt="AZ Corp Commission sign" class="az-flag">
     </div>
   </section>
+  
+  <main class="main-flex">
 
-  <main>
-    <label>Annual Solar Production (kWh):
-      <input id="solar" type="number" value="10000">
-    </label>
-    <label>Annual Energy Usage (kWh):
-      <input id="usage" type="number" value="12000">
-    </label>
-    <label>Self-Consumption Rate (%):
-      <input id="self" type="number" value="60">
-    </label>
-    <label>Retail Rate (¢ /kWh):
-      <input id="rate" type="number" value="13" min="3" max="40" step="1">
-    </label>
-    <button onclick="calculateSavings()">Calculate</button>
-    <div id="results"></div>
+  <section class="solar-history">
+    <h2>Arizona Solar Regulation Timeline</h2>
+    <p>Arizona has played an interesting role in shaping solar policy in the U.S. The Arizona Corporation Commission (AZCC) has been the hub of 
+       regulatory mandates that affect private solar deployments and corporate revenue streams. This page is a consolidated timeline of some important AZCC and Utility processing:</p>
+
+    <h3>2006  Renewable Energy Standard and Tariff (REST)</h3>
+    <p>The AZCC approved the REST rules, requiring regulated utilities to generate 15% of their energy from renewable sources by 2025. 
+       This policy put the spurs into utility-scale and distributed solar access across the state.</p>
+
+    <h3>2008  Net Metering Reimbursement Mandated for Retail Solar Producers</h3>
+    <p>Arizona formally adopted Net-Metering as a very popular consumer satisfication concept, that ultimately became a virtual cigarette flicked into a virtual dumpster full of shreded cardboard, 
+       oily rags and old tires. Mandating that solar adoptees receive full retail credit for any excess energy sent across, or down the street to their neighbors, (through the utility grid wiring) 
+       became an issue that utility providers had to take issue with, or at least ask <strong>"Hey, We are hosting this transfer and billing the transferee at zero net profit, so what is in this exchange us?"</strong>. 
+       Hindsight really is 20/15 and in fairness to the AZCC Commisioners, there would have been zero foresight into the magnitude of decentralizing energy transfer and revenue diversion just a few years later. 
+       Bottom line: This single policy mandate spun up rooftop solar adoption at private residences, public facilities and business venues at an unprecedented rate.</p>
+
+    <h3>2013  Net Metering Fee Introduced</h3>
+    <p>The AZCC approved a monthly punitive fee for solar customers in APS territory, marking the beginning of the shift away from full retail price compensation. 
+       This move was spun as a compromise between utilities and solar advocates, but it benchmarked the turning point of growing tension, consumer resentment 
+       for a full-reverse pull-back, and future provider backlash against what should have been an equitable Kum-ba-ya retreat with s'mores, instead of a greasy rag, tire fire.</p>
+
+    <h3>2015-2017  Net Metering Replaced by Export Rates</h3>
+    <p>Unaffected and unhindered by the AZCC, SRP effectively abolished Net-Metering for their members in 2015, replacing it with fixed export rates and punitive demand-based charges, 
+       all to be unilaterally determined by internal board processing. In 2017, the AZCC officially ended net metering mandates for APS and TEP, who anxiously adopted into 
+       Resource Comparison Proxy (RCP) models, which compensate excess solar exports at annually adjusted rates.</p>
+
+    <h3>2020s  Ongoing Adjustments and Advocacy</h3>
+    <p>Export rates continue to decline annually, and solar customers must navigate complex rate plans, high time-of-use TOU pricing, and punitive demand charges. 
+       Advocacy efforts persist to reset the table with fair compensation, non-punitive rate plans and normal-hours grid access like non-solar consumers enjoy.</p>
+
+    <p>Understanding this regulatory history is valuable for setting expectations toward evaluating a potential investment in solar energy production.<br> 
+       Use the <strong><a href="index-solar.html">baseline calculator</a></strong> below vvv, to demonstrate how your provider's rate plans can affect potential ROI.</p>
+  </section>
+
+    <div class="calculator">
+      <label>Annual Solar Production (kWh):
+        <input id="solar" type="number" value="10000">
+      </label>
+      <label>Annual Energy Usage (kWh):
+        <input id="usage" type="number" value="12000">
+      </label>
+      <label>Self-Consumption Rate (%):
+        <input id="self" type="number" value="60">
+      </label>
+      <label>Retail Rate (¢ /kWh):
+        <input id="rate" type="number" value="13" min="3" max="40" step="1">
+      </label>
+      <button onclick="calculateSavings()">Calculate</button>
+      <div id="results"></div>
+    </div>
+
+    <section class="roi-comparison">
+      <h2>Solar ROI Comparison by Utility (2025)</h2>
+      <table class="roi-table">
+        <thead>
+          <tr>
+            <th>Utility</th>
+            <th>Buyback Rate</th>
+            <th>Payback Period</th>
+            <th>ROI Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>SRP</strong></td>
+            <td>$0.027–$0.037/kWh</td>
+            <td>12–18 years</td>
+            <td>Low export rate + high demand charges = weakest ROI. Battery storage helps but adds cost.</td>
+          </tr>
+          <tr>
+            <td><strong>APS</strong></td>
+            <td>$0.0761/kWh (RCP)</td>
+            <td>8–12 years</td>
+            <td>Moderate ROI. TOU plans reward smart usage timing. No demand charge on one plan.</td>
+          </tr>
+          <tr>
+            <td><strong>TEP</strong></td>
+            <td>$0.0781/kWh (10-year fixed)</td>
+            <td>7–11 years</td>
+            <td>Most stable ROI. Fixed export rate and no demand charge make it solar-friendly.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
   </main>
-
   <footer>
-  </p>  
-  <p>&copy; 2025 Utility Solar AZ | Mark Ketring | WDD 130.A1</p>
-  <p>
-    <a href="https://jigsaw.w3.org/css-validator/check/referer">
+    <div class="footer-logo">
+      <a href="index-solar.html">
+        <img src="images/tower-lines.jpg" alt="Limp Grid Logo" class="footer-logo-img">
+      </a>
+    </div>  
+    
+    <p>&copy; 2025 Utility Solar AZ | Mark Ketring | WDD 130.A1</p>
+  
+    <div class="social-icons">
+      <a href="#"><img src="images/facebook.png" alt="Facebook" class="social-img"></a>
+      <a href="#"><img src="images/twitter.png" alt="Twitter" class="social-img"></a>
+      <a href="#"><img src="images/instagram.png" alt="Instagram" class="social-img"></a>
+      <a href="https://jigsaw.w3.org/css-validator/check/referer">
         <img style="border:0;width:88px;height:31px"
-            src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
-            alt="Valid CSS!" >
-    </a>
-</p>
-  <div class="social-icons">
-  <a href="#"><img src="images/facebook.png" alt="Facebook" class="social-img"></a>
-  <a href="#"><img src="images/twitter.png" alt="Twitter" class="social-img"></a>
-  <a href="#"><img src="images/instagram.png" alt="Instagram" class="social-img"></a>
-  <!-- <a href="#"><img src="images/linkedin.png" alt="LinkedIn" class="social-img"></a> -->
-</div>
-
-</footer>
-
+             src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+             alt="Valid CSS!">
+      </a>
+    </div>
+  
+    <div class="footer-button">
+      <a href="site-plan-solar.html" class="footer-link-button">Site Plan</a>
+    </div>
+  </footer>
 
   <script>
-function calculateSavings() {
-  const solar = parseFloat(document.getElementById('solar').value);
-  const usage = parseFloat(document.getElementById('usage').value);
-  const selfRate = parseFloat(document.getElementById('self').value) / 100;
-  const retailRate = parseFloat(document.getElementById('rate').value) / 100;
+    function calculateSavings() {
+      const solar = parseFloat(document.getElementById('solar').value);
+      const usage = parseFloat(document.getElementById('usage').value);
+      const selfRate = parseFloat(document.getElementById('self').value) / 100;
+      const retailRate = parseFloat(document.getElementById('rate').value) / 100;
 
-  const offsetKWh = solar * selfRate;
-  const exportKWh = solar * (1 - selfRate);
-  const offsetValue = offsetKWh * retailRate;
+      const offsetKWh = solar * selfRate;
+      const exportKWh = solar * (1 - selfRate);
+      const offsetValue = offsetKWh * retailRate;
 
-  const aps = offsetValue + exportKWh * 0.07619;
-  const tep = offsetValue + exportKWh * 0.078;
-  const srp = offsetValue + exportKWh * 0.0281;
+      const aps = offsetValue + exportKWh * 0.07619;
+      const tep = offsetValue + exportKWh * 0.078;
+      const srp = offsetValue + exportKWh * 0.0281;
 
-  document.getElementById('results').innerHTML = `
-    <p><strong>Estimated Annual Savings:</strong></p>
-    <table class="results-table">
-      <thead>
-        <tr>
-          <th>Provider</th>
-          <th>Offset</th>
-          <th>Export Rate</th>
-          <th>Retail Rate</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>APS</td>
-          <td>$${aps.toFixed(2)}</td>
-          <td>$0.07619/kWh</td>
-          <td>$${retailRate.toFixed(2)}/kWh</td>
-        </tr>
-        <tr>
-          <td>TEP</td>
-          <td>$${tep.toFixed(2)}</td>
-          <td>$0.07800/kWh</td>
-          <td>$${retailRate.toFixed(2)}/kWh</td>
-        </tr>
-        <tr>
-          <td>SRP</td>
-          <td>$${srp.toFixed(2)}</td>
-          <td>$0.02810/kWh</td>
-          <td>$${retailRate.toFixed(2)}/kWh</td>
-        </tr>
-      </tbody>
-    </table>`;
-}
-
+      document.getElementById('results').innerHTML = `
+        <p><strong>Estimated Annual Savings:</strong></p>
+        <table class="results-table">
+          <thead>
+            <tr>
+              <th>Provider</th>
+              <th>Offset</th>
+              <th>Export Rate</th>
+              <th>Retail Rate</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>APS</td>
+              <td>$${aps.toFixed(2)}</td>
+              <td>$0.07619/kWh</td>
+              <td>$${retailRate.toFixed(2)}/kWh</td>
+            </tr>
+            <tr>
+              <td>TEP</td>
+              <td>$${tep.toFixed(2)}</td>
+              <td>$0.07800/kWh</td>
+              <td>$${retailRate.toFixed(2)}/kWh</td>
+            </tr>
+            <tr>
+              <td>SRP</td>
+              <td>$${srp.toFixed(2)}</td>
+              <td>$0.02810/kWh</td>
+              <td>$${retailRate.toFixed(2)}/kWh</td>
+            </tr>
+          </tbody>
+        </table>`;
+    }
   </script>
-
+  </div>
 </body>
 </html>
-
