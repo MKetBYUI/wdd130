@@ -133,7 +133,8 @@ nav a {
   align-items: flex-start;
   gap: 2rem;
   margin: 2em;
-  padding: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 10px 12px rgba(0,0,0,0.1);}
@@ -301,4 +302,8 @@ footer p {
   min-height: 100vh;}
 
 main {
-  flex: 1;}
+  flex: 1;
+  padding: 0 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
