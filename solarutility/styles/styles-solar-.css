@@ -1,4 +1,3 @@
-
 :root {
   --primary-color: rgb(200, 20, 20);
   --secondary-color: rgb(255, 225, 0);
@@ -6,6 +5,9 @@
   --accent2-color: rgb(20, 20, 170);
   --font-family: 'Open Sans', sans-serif;
   --title-font: 'Rock Salt', cursive;}
+
+h1, h2 {
+  font-family: 'Rock Salt', cursive;}  
 
 html, body {
   margin: 0;
@@ -311,5 +313,4 @@ main {
   flex: 1;
   padding: 0 2em;
   max-width: 1200px;
-  margin: 0 auto;
-}
+  margin: 0 auto;}
