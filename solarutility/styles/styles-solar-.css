@@ -3,11 +3,10 @@
   --secondary-color: rgb(255, 225, 0);
   --accent1-color: rgb(185, 115, 50);
   --accent2-color: rgb(20, 20, 170);
-  --font-family: 'Open Sans', sans-serif;
-  --title-font: 'Rock Salt', cursive;}
+  --font-family: 'Roboto', sans-serif, Tahoma;}
 
 h1, h2 {
-  font-family: 'Rock Salt', cursive;}  
+  font-family: 'Roboto', sans-serif;}  
 
 html, body {
   margin: 0;
