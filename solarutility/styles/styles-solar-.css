@@ -160,13 +160,13 @@ p {
 
 .roi-comparison h2 {
   text-align: center;
-  font-family: 'Rock Salt', cursive;
+  font-family: 'Roboto', sans-serif;
   margin-bottom: 1rem;}
 
 .roi-table {
   width: 100%;
   border-collapse: collapse;
-  font-family: Arial, sans-serif;}
+  font-family: Tahoma, sans-serif;}
 
 .roi-table th,
 .roi-table td {
